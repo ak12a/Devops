@@ -21,3 +21,14 @@ Example:
  To restart safely 
 # java -jar jenkins-cli.jar -s http://jenkins:8080/ -auth arvind:11ba8864868e9209f4e86d498f727c9a31  safe-restart
  
+
+# 4 Install,Update, Disable plugins using jenkins-cli 
+  Install Plugins 
+   #  java -jar jenkins-cli.jar -s http://jenkins:8080/ -auth arvind:11ba8864868e9209f4e86d498f727c9a31  install-plugin docker 
+   
+ Update Plugins: 
+  #  java -jar jenkins-cli.jar -s http://jenkins:8080/ -auth arvind:11ba8864868e9209f4e86d498f727c9a31 install github
+
+ Disable Plugins: 
+   java -jar jenkins-cli.jar -s http://jenkins:8080/ -auth arvind:11ba8864868e9209f4e86d498f727c9a31  disable-plugin docker 
+      
