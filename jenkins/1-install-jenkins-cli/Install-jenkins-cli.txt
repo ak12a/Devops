@@ -1,0 +1,23 @@
+# 1 Download the jenkins jar file. 
+wget http://<jenkins-server-ip>:8080/jnlpJars/jenkins-cli.jar
+
+# 2 Create token to access the jenkins server using cli 
+   Steps:
+    1- Login to jenkins server 
+    2- Click on user name (Right Side top menu)
+    3- Click on congifure 
+    4- Click on API-Token and click on Add new Token and save the API token 
+    5- Click on save Button 
+
+
+# 3 Access the jenkins server using CLI 
+Note: Your working Directory should be there where you have downloaded the  jenkins-cli.jar file in Step 1. 
+ 
+Command: 
+ # java -jar jenkins-cli.jar -s http://jenkins-server-ip:8080/ -auth username:api-token -webSocket list-jobs
+Example: 
+# java -jar jenkins-cli.jar -s http://jenkins:8080/ -auth arvind:11ba8864868e9209f4e86d498f727c9a31 -webSocket list-jobs
+
+ To restart safely 
+# java -jar jenkins-cli.jar -s http://jenkins:8080/ -auth arvind:11ba8864868e9209f4e86d498f727c9a31  safe-restart
+ 
